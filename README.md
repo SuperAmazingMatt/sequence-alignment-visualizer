@@ -31,3 +31,14 @@ Because the Visualizer is a pure client-side application, no installation or bac
 * **HTML5 / CSS3:** Utilizing CSS Grid architectures for pixel-perfect sequence locking.
 * **Vanilla JavaScript (ES6):** Handles all string manipulation, reverse-complement logic, and DOM rendering natively.
 * **html2canvas:** Third-party library utilized for HD DOM-to-Image capture.
+
+## ⚠️ Known Limitations (Current Version)
+As this visualizer is actively being developed, there are a few known UI/UX quirks in the current build:
+* **Primer Overlap Rendering:** If multiple primers heavily overlap on the exact same sequence chunk, their name tags and vertical guide lines may occasionally clip or visually overlap. 
+* **PNG Export Chevron Bug:** The `html2canvas` screenshot engine currently does not support CSS `clip-path` properties. While the primers display as directional arrows (chevrons) in the live browser, they will render as standard rectangles in the downloaded `.png` image. 
+
+## 🗺️ Roadmap & Future Features
+We are continuously working to upgrade the Visualizer. Planned features for upcoming releases include:
+* **RNA Support:** Implementation of RNA sequence handling, including automated Thymine/Uracil (T/U) toggling for transcript alignments.
+* **SVG/Canvas Engine Upgrade:** Rebuilding the primer rendering engine to ensure directional arrows are perfectly preserved during image export.
+* **Dynamic Collision Detection:** Upgrading the primer track engine to stack overlapping primer names seamlessly without visual clipping.
